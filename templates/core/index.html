@@ -1,0 +1,666 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ibrahim Karanja | Computer Science & Cybersecurity</title>
+    <meta name="description" content="Portfolio of Ibrahim Karanja Wambui — BSc Computer Science, Cybersecurity Enthusiast, Dedan Kimathi University.">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Your Custom CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">IK.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item ms-2">
+                    <a href="/media/CV_Ibrahim_Karanja.pdf" class="btn-cv nav-link" download>
+                        <i class="fas fa-download me-1"></i> Download CV
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+    <div class="container position-relative">
+        <img src="https://avatars.githubusercontent.com/u/118934513?v=4"
+             alt="Ibrahim Karanja"
+             class="hero-avatar">
+
+        <div class="mb-3">
+            <span class="badge-role">BSc Computer Science</span>
+            <span class="badge-role">Cybersecurity</span>
+            <span class="badge-role">Dedan Kimathi University</span>
+        </div>
+
+        <h1>IBRAHIM KARANJA WAMBUI</h1>
+
+        <p class="tagline">
+            Motivated developer passionate about solving complex tech problems,
+            cybersecurity, and building impactful software solutions.
+        </p>
+
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="#contact" class="btn-primary-custom">
+                <i class="fas fa-envelope me-2"></i>Let's Connect
+            </a>
+            <a href="https://github.com/IbrahimAce" target="_blank" class="btn-outline-custom">
+                <i class="fab fa-github me-2"></i>GitHub Profile
+            </a>
+            <a href="/media/CV_Ibrahim_Karanja.pdf" class="btn-outline-custom" download>
+                <i class="fas fa-file-pdf me-2"></i>Download CV
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FLASH MESSAGES ===== -->
+{% if messages %}
+<div class="container mt-3">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Career objective & personal info</p>
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="about-card">
+                    <h5 class="mb-3" style="color:#3b82f6;">Career Objective</h5>
+                    <p>
+                        Motivated and detail-oriented BSc Computer Science student at Dedan Kimathi University
+                        seeking opportunities to gain practical experience in technology-driven roles.
+                        I am passionate about cybersecurity, software development, and emerging technologies,
+                        with a strong foundation in networking, Linux, and full-stack development.
+                    </p>
+                    <p class="mt-3">
+                        I am a quick learner who thrives in collaborative environments and am committed
+                        to contributing meaningfully to any team I join. My IBM Cybersecurity certification
+                        and hands-on project experience make me ready to tackle real-world challenges.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="about-card">
+                    <h5 class="mb-3" style="color:#3b82f6;">Personal Details</h5>
+                    <div class="about-info-item">
+                        <i class="fas fa-user"></i>
+                        <span>Ibrahim Karanja Wambui</span>
+                    </div>
+                    <div class="about-info-item">
+                        <i class="fas fa-university"></i>
+                        <span>Dedan Kimathi University of Technology</span>
+                    </div>
+                    <div class="about-info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>BSc Computer Science</span>
+                    </div>
+                    <div class="about-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Nairobi, Kenya</span>
+                    </div>
+                    <div class="about-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>karanjaibrahim141@gmail.com</span>
+                    </div>
+                    <div class="about-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+254 794 136 592</span>
+                    </div>
+                    <div class="about-info-item" style="border-bottom:none;">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/IbrahimAce" target="_blank">github.com/IbrahimAce</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section section-alt" id="skills">
+    <div class="container">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <p class="section-subtitle">Technical skills and personal strengths</p>
+
+        {% if skills %}
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <h6 class="text-muted mb-3 text-uppercase" style="letter-spacing:1px;">Technical Skills</h6>
+                {% for skill in skills %}
+                {% if skill.category == "Technical" %}
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>{{ skill.name }}</span>
+                        <span style="color:#3b82f6;">{{ skill.percentage }}%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width:{{ skill.percentage }}%"></div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="col-lg-6">
+                <h6 class="text-muted mb-3 text-uppercase" style="letter-spacing:1px;">Soft Skills</h6>
+                {% for skill in skills %}
+                {% if skill.category == "Soft" %}
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>{{ skill.name }}</span>
+                        <span style="color:#3b82f6;">{{ skill.percentage }}%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width:{{ skill.percentage }}%"></div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                <div class="mt-4">
+                    <p style="color:#94a3b8;font-size:0.9rem;">
+                        <i class="fas fa-heart me-2" style="color:#3b82f6;"></i>
+                        Hobbies: Exploring Emerging Tech, In-line Skating, Football
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <!-- Default skills shown before you add data in admin -->
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <h6 class="text-muted mb-3 text-uppercase" style="letter-spacing:1px;">Technical Skills</h6>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Networking</span><span style="color:#3b82f6;">85%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Linux &amp; Windows</span><span style="color:#3b82f6;">80%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Python &amp; Django</span><span style="color:#3b82f6;">75%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Cybersecurity (IBM)</span><span style="color:#3b82f6;">80%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>PC Assembly</span><span style="color:#3b82f6;">90%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>JavaScript</span><span style="color:#3b82f6;">65%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h6 class="text-muted mb-3 text-uppercase" style="letter-spacing:1px;">Soft Skills & Hobbies</h6>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Critical Thinking</span><span style="color:#3b82f6;">95%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Adaptability</span><span style="color:#3b82f6;">90%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Team Collaboration</span><span style="color:#3b82f6;">88%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Problem Solving</span><span style="color:#3b82f6;">92%</span></div>
+                    <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+                </div>
+                <div class="mt-4">
+                    <p style="color:#94a3b8;font-size:0.9rem;">
+                        <i class="fas fa-heart me-2" style="color:#3b82f6;"></i>
+                        Hobbies: Exploring Emerging Tech, In-line Skating, Football
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="section" id="experience">
+    <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">Internships and attachments</p>
+
+        {% if experiences %}
+        <div class="timeline">
+            {% for exp in experiences %}
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h5>{{ exp.role }}</h5>
+                    <div style="color:#3b82f6;font-weight:600;font-size:0.95rem;margin-bottom:4px;">
+                        <i class="fas fa-building me-2"></i>{{ exp.company }}
+                    </div>
+                    <div class="timeline-period">
+                        <i class="fas fa-calendar me-2"></i>{{ exp.period }}
+                    </div>
+                    <p>{{ exp.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Shown before you add data in admin -->
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h5>IT Attachment Intern</h5>
+                    <div style="color:#3b82f6;font-weight:600;margin-bottom:4px;">
+                        <i class="fas fa-building me-2"></i>Equity Bank Kenya
+                    </div>
+                    <div class="timeline-period"><i class="fas fa-calendar me-2"></i>May 2024 – Aug 2024</div>
+                    <p style="color:#94a3b8;">
+                        Supported IT helpdesk operations, assisted with network troubleshooting,
+                        PC setup and maintenance, and provided technical support to staff.
+                        Gained hands-on experience with banking IT infrastructure and security protocols.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h5>Technical Support Volunteer</h5>
+                    <div style="color:#3b82f6;font-weight:600;margin-bottom:4px;">
+                        <i class="fas fa-building me-2"></i>Dedan Kimathi University ICT Department
+                    </div>
+                    <div class="timeline-period"><i class="fas fa-calendar me-2"></i>2023</div>
+                    <p style="color:#94a3b8;">
+                        Assisted the ICT department with computer lab maintenance,
+                        software installations, and student technical support.
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section class="section section-alt" id="education">
+    <div class="container">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">Academic background and certifications</p>
+
+        {% if education %}
+        <div class="timeline">
+            {% for edu in education %}
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h5>{{ edu.qualification }}</h5>
+                    <div style="color:#3b82f6;font-weight:600;margin-bottom:4px;">
+                        <i class="fas fa-university me-2"></i>{{ edu.institution }}
+                    </div>
+                    <div class="timeline-period">
+                        <i class="fas fa-calendar me-2"></i>{{ edu.period }}
+                    </div>
+                    {% if edu.description %}
+                    <p>{{ edu.description }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Shown before you add data in admin -->
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h5>BSc Computer Science</h5>
+                    <div style="color:#3b82f6;font-weight:600;margin-bottom:4px;">
+                        <i class="fas fa-university me-2"></i>Dedan Kimathi University of Technology
+                    </div>
+                    <div class="timeline-period"><i class="fas fa-calendar me-2"></i>2021 – Present</div>
+                    <p style="color:#94a3b8;">
+                        Studying core CS subjects including Data Structures, Algorithms, Networking,
+                        Database Systems, Operating Systems, and Software Engineering.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h5>IBM Cybersecurity Analyst Certificate</h5>
+                    <div style="color:#3b82f6;font-weight:600;margin-bottom:4px;">
+                        <i class="fas fa-certificate me-2"></i>IBM / Coursera
+                    </div>
+                    <div class="timeline-period"><i class="fas fa-calendar me-2"></i>2024</div>
+                    <p style="color:#94a3b8;">
+                        Completed professional certificate covering network security, incident response,
+                        threat intelligence, and cybersecurity tools.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h5>Kenya Certificate of Secondary Education (KCSE)</h5>
+                    <div style="color:#3b82f6;font-weight:600;margin-bottom:4px;">
+                        <i class="fas fa-school me-2"></i>Secondary School
+                    </div>
+                    <div class="timeline-period"><i class="fas fa-calendar me-2"></i>2017 – 2021</div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="section" id="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Built with Django, Python, Java & more — view all on GitHub</p>
+
+        {% if projects %}
+        <div class="row g-4">
+            {% for project in projects %}
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}" style="width:100%;height:180px;object-fit:cover;">
+                    {% else %}
+                    <div style="height:120px;background:linear-gradient(135deg,#1e293b,#334155);display:flex;align-items:center;justify-content:center;">
+                        <i class="fab fa-github" style="font-size:2.5rem;color:#3b82f6;opacity:0.5;"></i>
+                    </div>
+                    {% endif %}
+                    <div class="project-card-body">
+                        <h5>{{ project.title }}</h5>
+                        <p>{{ project.description|truncatewords:20 }}</p>
+                        <div class="mb-3">
+                            {% for tech in project.tech_stack.split %}
+                            <span class="tech-badge">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                        {% if project.github_link %}
+                        <a href="{{ project.github_link }}" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Default projects shown before you add data in admin -->
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div style="height:120px;background:linear-gradient(135deg,#1e293b,#334155);display:flex;align-items:center;justify-content:center;">
+                        <i class="fab fa-github" style="font-size:2.5rem;color:#3b82f6;opacity:0.5;"></i>
+                    </div>
+                    <div class="project-card-body">
+                        <h5>Inventory Management System</h5>
+                        <p>A full-featured inventory tracking system built with Django, featuring product management, stock alerts, and reporting.</p>
+                        <div class="mb-3">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">SQLite</span>
+                        </div>
+                        <a href="https://github.com/IbrahimAce/inventory_management" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div style="height:120px;background:linear-gradient(135deg,#1e293b,#334155);display:flex;align-items:center;justify-content:center;">
+                        <i class="fab fa-github" style="font-size:2.5rem;color:#3b82f6;opacity:0.5;"></i>
+                    </div>
+                    <div class="project-card-body">
+                        <h5>Smart Library System</h5>
+                        <p>A smart library management application with book tracking, member management, and borrowing history.</p>
+                        <div class="mb-3">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">Bootstrap</span>
+                        </div>
+                        <a href="https://github.com/IbrahimAce/smart-library-system" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div style="height:120px;background:linear-gradient(135deg,#1e293b,#334155);display:flex;align-items:center;justify-content:center;">
+                        <i class="fab fa-github" style="font-size:2.5rem;color:#3b82f6;opacity:0.5;"></i>
+                    </div>
+                    <div class="project-card-body">
+                        <h5>Django Blog Platform</h5>
+                        <p>A blog platform with user authentication, post management, comments, and a clean admin interface.</p>
+                        <div class="mb-3">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">HTML/CSS</span>
+                        </div>
+                        <a href="https://github.com/IbrahimAce/django-blog" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div style="height:120px;background:linear-gradient(135deg,#1e293b,#334155);display:flex;align-items:center;justify-content:center;">
+                        <i class="fab fa-github" style="font-size:2.5rem;color:#3b82f6;opacity:0.5;"></i>
+                    </div>
+                    <div class="project-card-body">
+                        <h5>InfoSec Helmet.js</h5>
+                        <p>A web security project using Helmet.js to implement security headers and protect against common web vulnerabilities.</p>
+                        <div class="mb-3">
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Helmet.js</span>
+                        </div>
+                        <a href="https://github.com/IbrahimAce/infosec-helmetJS" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div style="height:120px;background:linear-gradient(135deg,#1e293b,#334155);display:flex;align-items:center;justify-content:center;">
+                        <i class="fab fa-github" style="font-size:2.5rem;color:#3b82f6;opacity:0.5;"></i>
+                    </div>
+                    <div class="project-card-body">
+                        <h5>Student Expense Tracker</h5>
+                        <p>A Java application for students to track and manage daily expenses, set budgets, and visualise spending patterns.</p>
+                        <div class="mb-3">
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">OOP</span>
+                        </div>
+                        <a href="https://github.com/IbrahimAce/student-expense-tracker" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="text-center mt-5">
+            <a href="https://github.com/IbrahimAce" target="_blank" class="btn-primary-custom">
+                <i class="fab fa-github me-2"></i>See All Projects on GitHub
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section section-alt" id="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Open to internships, attachments, and collaborations</p>
+
+        <div class="row g-4">
+            <!-- Contact Form -->
+            <div class="col-lg-7">
+                <div class="contact-card">
+                    <h5 class="mb-4" style="color:#3b82f6;">Send Me a Message</h5>
+                    <form method="POST" action="#contact">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                            <div style="color:#fca5a5;font-size:0.85rem;margin-top:4px;">{{ form.name.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            {{ form.email }}
+                            {% if form.email.errors %}
+                            <div style="color:#fca5a5;font-size:0.85rem;margin-top:4px;">{{ form.email.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Subject</label>
+                            {{ form.subject }}
+                            {% if form.subject.errors %}
+                            <div style="color:#fca5a5;font-size:0.85rem;margin-top:4px;">{{ form.subject.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Message</label>
+                            {{ form.message }}
+                            {% if form.message.errors %}
+                            <div style="color:#fca5a5;font-size:0.85rem;margin-top:4px;">{{ form.message.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-5">
+                <div class="contact-card">
+                    <h5 class="mb-4" style="color:#3b82f6;">Contact Information</h5>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:karanjaibrahim141@gmail.com">karanjaibrahim141@gmail.com</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+254794136592">+254 794 136 592</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Nairobi, Kenya</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/IbrahimAce" target="_blank">github.com/IbrahimAce</a>
+                    </div>
+
+                    <div class="mt-4 p-3" style="background:rgba(59,130,246,0.08);border-radius:10px;border:1px solid rgba(59,130,246,0.2);">
+                        <p style="color:#94a3b8;font-size:0.9rem;margin:0;">
+                            <i class="fas fa-info-circle me-2" style="color:#3b82f6;"></i>
+                            I am currently open to <strong style="color:#e2e8f0;">internship opportunities</strong>,
+                            industrial attachments, and freelance projects.
+                            Response time is usually within 24 hours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <p>
+            © 2026 <strong style="color:#3b82f6;">Ibrahim Karanja Wambui</strong> •
+            Built with <i class="fas fa-heart" style="color:#ef4444;"></i> using Django + Bootstrap 5
+        </p>
+        <p class="mt-1">
+            <a href="https://github.com/IbrahimAce" target="_blank">
+                <i class="fab fa-github me-1"></i>GitHub
+            </a>
+            &nbsp;•&nbsp;
+            <a href="mailto:karanjaibrahim141@gmail.com">
+                <i class="fas fa-envelope me-1"></i>Email
+            </a>
+        </p>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<a href="#home" class="scroll-top" id="scrollTop">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Scroll-to-top button
+window.addEventListener('scroll', function() {
+    const btn = document.getElementById('scrollTop');
+    if (window.scrollY > 400) {
+        btn.classList.add('visible');
+    } else {
+        btn.classList.remove('visible');
+    }
+});
+
+// Animate skill bars when they come into view
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.style.width = entry.target.getAttribute('data-width');
+        }
+    });
+});
+
+document.querySelectorAll('.skill-fill').forEach(function(bar) {
+    const width = bar.style.width;
+    bar.setAttribute('data-width', width);
+    bar.style.width = '0%';
+    observer.observe(bar);
+});
+</script>
+
+</body>
+</html>
