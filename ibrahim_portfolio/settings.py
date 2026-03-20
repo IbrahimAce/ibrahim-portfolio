@@ -55,7 +55,8 @@ WSGI_APPLICATION = 'ibrahim_portfolio.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         default=f'sqlite:///{BASE_DIR}/db.sqlite3',
-        conn_max_age=600
+        conn_max_age=600,
+        ssl_require=False
     )
 }
 
