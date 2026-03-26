@@ -4,6 +4,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+ADMINS = [('Ibrahim', 'karanjaibrahim141@gmail.com')]
+
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-local-dev-only')
 
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
