@@ -90,6 +90,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AXES_FAILURE_LIMIT = 3
 AXES_COOLOFF_TIME = 672
 AXES_LOCKOUT_TEMPLATE = None
+AXES_LOCKOUT_PARAMETERS = ['ip_address', 'username']
 
 # Email config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -100,8 +101,3 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_USER')
 SERVER_EMAIL = os.environ.get('EMAIL_USER')
-
-# Axes email notification
-AXES_SEND_EMAIL_NOTIFICATIONS = True
-AXES_EMAIL_SUBJECT = '🚨 Failed Login Attempt on Your Portfolio!'
-AXES_LOCKOUT_PARAMETERS = ['ip_address', 'username']
